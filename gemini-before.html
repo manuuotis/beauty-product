@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Beauty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffc1cc, #ffebf0);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #f06292;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f06292;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        #home {
+            text-align: center;
+        }
+
+        #home img {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        #home h2 {
+            margin-top: 30px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        #home p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #f06292;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #d74a7e;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .product:hover {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .product a {
+            background-color: #f06292;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .product a:hover {
+            background-color: #d74a7e;
+        }
+
+        .view-more {
+            text-align: center;
+            margin-top: 30px;
+                }
+
+        #about {
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        #about form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #about label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        #about input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        #about button[type="submit"] {
+            background-color: #f06292;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #about button[type="submit"]:hover {
+            background-color: #d74a7e;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background-color: #f06292;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            margin-left: 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: #d74a7e;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .product-grid {
+                flex-direction: column;
+            }
+
+            .product {
+                width: 100%;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input[type="text"] {
+                width: calc(100% - 70px);
+            }
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #f5f5f5;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Blooming Beauty</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <img src="images/banner.jpg" alt="Beauty Products Banner">
+            <h2>Unlock Your Inner Radiance</h2>
+            <p>Discover a world of luxurious beauty products designed to pamper your skin, enhance your features, and boost your confidence.</p>
+            <button>Explore Products</button>
+        </section>
+
+        <section id="products">
+            <h2>Our Top Picks</h2>
+            <div class="product-grid">
+                <article class="product">
+                    <img src="images/product1.jpg" alt="Product 1">
+                    <h3>Hydrating Serum</h3>
+                    <p>Deeply hydrates and plumps the skin for a youthful glow.</p>
+                    <a href="#">Shop Now</a>
+                </article>
+                                <article class="product">
+                    <img src="images/product3.jpg" alt="Product 3">
+                    <h3>Nourishing Hair Mask</h3>                    
+                    <p>Restore shine and manageability to your hair.</p>
+                    <a href="#">Shop Now</a>
+                </article>
+            </div>
+            <button class="view-more">View More Products</button>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Blooming Beauty is dedicated to providing you with high-quality, natural beauty products that are effective and gentle on your skin. We believe that everyone deserves to feel beautiful, confident, and radiant.</p>
+            <form>
+                <h3>Join Our Mailing List</h3>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blooming Beauty. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Basic search functionality (example)
+        const searchInput = document.querySelector('.search-bar input[type="text"]');
+        const productGrid = document.querySelector('.product-grid');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const products = productGrid.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productTitle = product.querySelector('h3').textContent.toLowerCase();
+                if (productTitle.includes(searchTerm)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
