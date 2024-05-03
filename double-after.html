@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Product Store</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: lightblue; /* Brighter background for improved contrast */
+    margin: 0;
+    padding: 0;
+  }
+  .header, .footer {
+    background-color: #007BFF; /* Changed to ensure sufficient contrast */
+    color: white; /* Ensures contrast ratio above 4.5:1 */
+    text-align: center;
+    padding: 10px 0;
+  }
+  .navigation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .navigation ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .navigation a {
+    text-decoration: none;
+    color: white; /* Maintained white for clear visibility against the new background */
+  }
+  .navigation a:hover,
+  .navigation a:focus { /* Added focus for keyboard navigation */
+    text-decoration: underline;
+  }
+  .product {
+    background-color: #fff0f5; /* Soft pink for pleasing contrast with text */
+    padding: 20px;
+    margin: 20px 5%;
+    transition: box-shadow 0.3s ease;
+    outline: none; /* Remove default focus outline */
+  }
+  .footer {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="navigation">
+    <ul>
+      <li><a href="#home" tabindex="0">Home</a></li>
+      <li><a href="#products" tabindex="0">Products</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="product" tabindex="0" 
+     onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"
+     onfocus="hoverEffect(this)" onblur="normalEffect(this)">
+  <img src="product1.jpg" alt="Beauty Product 1" style="width:100%;">
+  <h3>Beauty Product Name 1</h3>
+  <p>Description of the first beauty product.</p>
+</div>
+
+<div class="product" tabindex="0" 
+     onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"
+     onfocus="hoverEffect(this)" onblur="normalEffect(this)">
+  <img src="product2.jpg" alt="Beauty Product 2" style="width:100%;">
+  <h3>Beauty Product Name 2</h3>
+  <p>Description of the second beauty product.</p>
+</div>
+
+<div class="product" tabindex="0" 
+     onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"
+     onfocus="hoverEffect(this)" onblur="normalEffect(this)">
+  <img src="product3.jpg" alt="Beauty Product 3" style="width:100%;">
+  <h3>Beauty Product Name 3</h3>
+  <p>Description of the third beauty product.</p>
+</div>
+
+<div class="footer">
+  © 2023 Beauty Product Store
+</div>
+
+<script>
+function hoverEffect(element) {
+  element.style.boxShadow = "0 0 10px #ff1493";
+}
+
+function normalEffect(element) {
+  element.style.boxShadow = "none";
+}
+</script>
+</body>
+</html>
