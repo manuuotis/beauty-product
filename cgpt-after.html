@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 20px 0; /* Increased margin between body, header, and footer */
             padding: 0;
             background-color: #f4f4f4;
         }
@@ -102,7 +102,7 @@
         header h1,
         nav ul li a,
         footer {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
@@ -116,7 +116,7 @@
 
         /* Styling the contact form header */
         form h2 {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: bold;
             color: #333;
             margin-bottom: 20px;
@@ -164,9 +164,9 @@
     <div id="contact">
         <form>
             <h2>Contact Us</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
+            <input type="text" id="your-name" name="your-name" placeholder="Your Name">
+            <input type="email" id="your-email" name="your-email" placeholder="Your Email">
+            <textarea id="your-message" name="your-message" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message">
         </form>
     </div>
@@ -174,18 +174,5 @@
     <footer>
         &copy; 2024 Beauty Product Store. All rights reserved.
     </footer>
-
-    <script>
-        // JavaScript for smoother scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
