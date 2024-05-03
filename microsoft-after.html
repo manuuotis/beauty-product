@@ -25,7 +25,7 @@
     margin: 0 15px;
   }
   .header a:hover {
-    color: #ffccd5;
+    color: #ffffff; /* Adjusted for better contrast */
   }
   .product-container {
     display: flex;
@@ -49,14 +49,12 @@
     display: flex;
     justify-content: center;
   }
-  .search-bar label {
-    display: none; /* Hide the label, but it will still be read by screen readers */
-  }
   .search-bar input {
     padding: 10px;
     width: 50%;
     border: none;
     border-radius: 5px;
+    background-color: #f4ecf7; /* Adjusted to match body background for better visibility */
   }
   .search-bar input:hover {
     background-color: #ffccd5;
@@ -71,8 +69,7 @@
 </div>
 
 <div class="search-bar">
-  <label for="search-input">Search for beauty products:</label>
-  <input type="text" id="search-input" placeholder="Search for beauty products...">
+  <input type="text" id="search-input" placeholder="Search for beauty products..." aria-label="Search for beauty products">
 </div>
 
 <div class="product-container">
