@@ -17,6 +17,11 @@
             padding: 20px;
             text-align: center;
             color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         nav ul {
@@ -93,29 +98,28 @@
             background-color: #d46a9f;
         }
 
-        /* Additional Styles */
-        label {
-            margin-bottom: 5px;
-            display: block;
+        /* Increased font size, contrast, and bold styling */
+        header h1,
+        nav ul li a,
+        footer {
+            font-size: 22px;
             font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Updated styles for better contrast */
-        header, footer {
-            background-color: #6c757d; /* Darker shade of gray */
+        /* Adding some padding to the header links */
+        nav ul li a {
+            padding: 5px 10px;
         }
 
-        input[type="submit"] {
-            background-color: #ff69b4;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #d46a9f;
+        /* Styling the contact form header */
+        form h2 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -160,12 +164,9 @@
     <div id="contact">
         <form>
             <h2>Contact Us</h2>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" placeholder="Your Name">
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" placeholder="Your Email">
-            <label for="message">Your Message:</label>
-            <textarea id="message" placeholder="Your Message"></textarea>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message">
         </form>
     </div>
@@ -173,5 +174,18 @@
     <footer>
         &copy; 2024 Beauty Product Store. All rights reserved.
     </footer>
+
+    <script>
+        // JavaScript for smoother scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
